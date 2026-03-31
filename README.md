@@ -18,6 +18,16 @@ npm install axios
 
 **2. Add your JWT token:**
 
+The API requires a valid JWT. Obtain one by logging in against the backend:
+
+```bash
+curl -X POST http://localhost:8080/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"username": "admin", "password": "admin"}'
+```
+
+Copy the token from the response.
+
 Open `src/components/ProductList.jsx` and replace the placeholder token with a valid JWT token from your backend:
 
 ```js
